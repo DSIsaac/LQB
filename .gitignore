@@ -1,0 +1,52 @@
+# 屏蔽资源数据包文件夹
+资源数据包_嵌入式（G431）_2021/
+
+# Keil MDK编译生成的文件
+*.o
+*.d
+*.crf
+*.lst
+*.map
+*.hex
+*.bin
+*.axf
+*.lnp
+*.dep
+*.sct
+*.tra
+*.htm
+*.build_log.htm
+*.iex
+*.__i
+*.i
+*._ia
+*.l2p
+*.fed
+*.gch
+
+# Keil工程文件
+MDK-ARM/*/
+!MDK-ARM/*.uvprojx
+!MDK-ARM/*.uvoptx
+!MDK-ARM/startup_*.s
+!MDK-ARM/RTE/
+*.uvguix.*
+
+# 调试文件
+JLinkLog.txt
+JLinkSettings.ini
+EventRecorder.log
+
+# 其他可能需要忽略的文件
+*.bak
+*.ddk
+*.edk
+*.ids
+*.lst
+*.p1
+*.plg
+*.tmp
+*.uvgui.*
+*.iex
+*.uvoptx.bak
+*.uvprojx.bak
