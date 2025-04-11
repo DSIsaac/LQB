@@ -10,7 +10,7 @@ Setting SettingManager = {
 	1,//interface_Need_Change
 	0,//passwordRight
 	0,//passwordWrongCount
-	{1, 2, 3},
-	{1, 2, 3},
+	{0x31, 0x32, 0x33},
+	{0x31, 0x32, 0x33},
 	{0x40, 0x40, 0x40}
 };

@@ -94,9 +94,9 @@ void Key_Deal(void)
 
 _Bool Check_Password()
 {
-	if((SettingManager.currentPassword[0] == SettingManager.inputPassword[0] - 0x30) &&
-	   (SettingManager.currentPassword[1] == SettingManager.inputPassword[1] - 0x30) &&
-	   (SettingManager.currentPassword[2] == SettingManager.inputPassword[2] - 0x30))
+	if((SettingManager.currentPassword[0] == SettingManager.inputPassword[0]) &&
+	   (SettingManager.currentPassword[1] == SettingManager.inputPassword[1]) &&
+	   (SettingManager.currentPassword[2] == SettingManager.inputPassword[2]))
 		return 1;
 	else
 		return 0;

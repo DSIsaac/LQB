@@ -3,6 +3,7 @@
 #include "Led.h"
 #include "Interface.h"
 #include "Key.h"
+#include "Timer.h"
 
 void Task_1000Hz()
 {
@@ -34,6 +35,8 @@ void Task_100Hz()
 		SettingManager.timerCount._100Hz = 0;
 		
 		Key_Deal();
+		PWM_Task();
+		Interface_Task();
 	}
 }
 
@@ -41,7 +44,7 @@ void Task_10Hz()
 {
 	if(SettingManager.timerCount._10Hz >= SettingManager.taskCount._10Hz){
 		SettingManager.timerCount._10Hz = 0;
-		
+		Led_Task();
 	}
 }
 
@@ -50,8 +53,7 @@ void Task_1Hz()
 	if(SettingManager.timerCount._1Hz >= SettingManager.taskCount._1Hz){
 		SettingManager.timerCount._1Hz = 0;
 		
-		Interface_Task();
-		Led_Task();
+		
 	}
 }
 
@@ -59,6 +61,7 @@ void Task_0_2Hz()
 {
 	if(SettingManager.timerCount._0_2Hz >= SettingManager.taskCount._0_2Hz){
 		SettingManager.timerCount._0_2Hz = 0;
+		
 		
 	}
 }

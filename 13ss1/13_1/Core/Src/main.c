@@ -30,6 +30,7 @@
 #include "Led.h"
 #include "lcd.h"
 #include "Interface.h"
+#include "Usart_Idle.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,9 +64,11 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void System_Init()
 {
+	Usart_Idle_Init();
 	LCD_Init();
 	Interface_Init();
 	Reset_All_Led();
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
 }
 /* USER CODE END 0 */
 
